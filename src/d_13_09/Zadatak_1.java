@@ -30,7 +30,17 @@ public class Zadatak_1 {
 		driver.findElement(By.name("username")).sendKeys("Admin");
 		Thread.sleep(3000);
 		driver.findElement(By.name("password")).sendKeys("admin123");
-				
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//input[@placeholder='Search']")).sendKeys("Me");
+		driver.findElement(By.xpath("//a[contains(@class, 'oxd-main-menu-item')]")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//span[contains(@class,'oxd-userdropdown-tab')]")).click();
+		driver.findElement(By.linkText("Logout")).click();
+
+		Thread.sleep(5000);
+		driver.quit();
+
 	}
 
 }
